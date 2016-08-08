@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.shoppingmall"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="11"
+        android:targetSdkVersion="20" />
+
+ <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- 支付权限 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.BAIDU_LOCATION_SERVICE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+	<!-- 微信支付 -->
+     <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS"/>   
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_02"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+         <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote" >
+            <intent-filter>
+                <action android:name="com.baidu.location.service_v2.2" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="7BffIdoZxAMpDuY6VjNtEVKcgzMQNvX5" />
+        
+        
+        <activity
+            android:name="com.example.shoppingmall.activity.Main_Tao"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.shoppingmall.activity.ShopActivity" >
+        </activity>
+        <activity android:name="com.example.shoppingmall.activity.GoodsActivity" >
+        </activity>
+        <activity android:name="com.example.shoppingmall.activity.LoginActivity" 
+             android:launchMode="singleTask" >
+        </activity>
+        <activity android:name="com.example.shoppingmall.activity.RegisterActivity" />
+        <activity android:name="com.example.shoppingmall.activity.ProductsConfirmActivity" />
+        <activity android:name="com.example.shoppingmall.activity.ProductsInfoActivity" />
+        <activity android:name="com.example.shoppingmall.activity.WomenActivity" />
+        <activity android:name="com.example.shoppingmall.activity.ChangeCityActivity" />
+        <activity android:name="com.example.shoppingmall.activity.MyinfoActivity" />
+        <activity android:name="com.example.shoppingmall.activity.AddressActivity" />
+        <activity android:name="com.example.shoppingmall.activity.NewAddressActivity" />
+        <activity android:name="com.example.shoppingmall.activity.ChangeNameActivity" />
+        <activity android:name="com.example.shoppingmall.activity.ChangepasswordActivity" />
+        <activity android:name="com.example.shoppingmall.activity.NotpayActivity" />
+        <activity android:name="com.example.shoppingmall.activity.MyorderActivity" />
+        <activity android:name="com.example.shoppingmall.activity.PingjiaActivity" />
+        <!-- 二维码 -->
+        <activity
+            android:name="com.zxing.activity.CaptureActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:windowSoftInputMode="stateAlwaysHidden" >
+        </activity>
+        <!-- 支付宝支付-->
+        <activity
+	    android:name="com.alipay.sdk.auth.AuthActivity"
+	    android:configChanges="orientation|keyboardHidden|navigation"
+	    android:exported="false"
+	    android:screenOrientation="behind" >
+	</activity>
+        <activity
+	    android:name="com.alipay.sdk.app.H5PayActivity"
+	    android:configChanges="orientation|keyboardHidden|navigation"
+	    android:exported="false"
+	    android:screenOrientation="behind" >
+	</activity>
+	
+	<!-- QQ登录 -->
+         <activity
+            android:name="com.tencent.tauth.AuthActivity"
+            android:launchMode="singleTask"
+            android:exported="false"
+            android:noHistory="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="tencent1105054569" /> 
+            </intent-filter>
+        </activity> 
+        
+        
+        <!-- 微博登录 -->
+        <activity
+            android:name="com.tencent.connect.common.AssistActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.sina.weibo.sdk.component.WeiboSdkBrowser"
+            android:configChanges="keyboardHidden|orientation"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" >
+        </activity>
+        <service
+            android:name="com.sina.weibo.sdk.net.DownloadService"
+            android:exported="false" >
+        </service>
+        <!-- 微信支付 -->
+        <activity
+            android:name="com.sun.shoppingmall.mypay.PayWeiXinActivity"
+            android:label="@string/title_activity_news_shop" >
+             
+        </activity>
+        
+        <receiver
+            android:name=".AppRegister">
+            <intent-filter>
+                <action android:name="com.tencent.mm.plugin.openapi.Intent.ACTION_REFRESH_WXAPP" />
+            </intent-filter>
+        </receiver>
+        
+         <activity
+            android:name="com.exmaple.shoppingmall.wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"/>
+         <!-- 微信登录 -->
+        <activity
+            android:name="com.example.shoppingmall.wxapi.WXEntryActivity"
+            android:exported="true"
+            android:launchMode="singleTop"
+            android:label="@string/app_name"
+    android:theme="@android:style/Theme.Translucent" >
+            </activity>
+    </application>
+
+</manifest>

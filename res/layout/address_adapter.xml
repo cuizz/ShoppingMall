@@ -1,0 +1,117 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:orientation="vertical"
+    tools:context="com.example.shoppingmall.MainActivity" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity__margin_bottom" >
+
+        <TextView  android:id="@+id/nametextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity__margin_top"
+            android:text="名字"
+            android:textSize="@dimen/normal_textsize" />
+
+        <TextView  android:id="@+id/phonetextview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/activity__margin_top"
+            android:text="名字"
+            android:textSize="@dimen/normal_textsize" />
+    </RelativeLayout>
+
+    <TextView  android:id="@+id/addresstextview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity__margin_top"
+        android:layout_marginTop="@dimen/activity__margin_bottom"
+        android:text="aaaa"
+        android:textSize="@dimen/normal_textsize" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/activity__margin_top"
+        android:background="@color/my_background_jianxi" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/activity__margin_bottom"
+        android:layout_marginTop="@dimen/activity__margin_bottom"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/checkbox_select_child"
+                android:layout_width="22dip"
+                android:layout_height="22dip"
+                android:layout_marginLeft="@dimen/activity__margin_top"
+                android:background="@drawable/checkboxselector"
+                android:button="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity__margin_top"
+                android:gravity="center"
+                android:text="设置为默认"
+                android:textSize="@dimen/normal_textsize" />
+        </LinearLayout>
+
+        <LinearLayout  android:id="@+id/bianjiLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/returnnn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity__margin_top"
+                android:gravity="center"
+                android:text="编辑"
+                android:textSize="@dimen/normal_textsize" />
+        </LinearLayout>
+
+        <LinearLayout  android:id="@+id/delectLL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/activity__margin_top"
+            android:layout_marginRight="@dimen/activity__margin_top"
+            android:gravity="right"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/returnnn" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/activity__margin_top"
+                android:gravity="center"
+                android:text="删除"
+                android:textSize="@dimen/normal_textsize" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

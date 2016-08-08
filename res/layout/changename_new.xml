@@ -1,0 +1,50 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/my_background_jianxi"
+    android:orientation="vertical"
+    tools:context="com.example.shoppingmall.MainActivity" >
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:background="@color/top_background" >
+
+        <ImageView
+            android:id="@+id/backImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/returnnn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="修改会员名"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_textsize" />
+    </FrameLayout>
+
+   <EditText android:id="@+id/nameET"
+       android:layout_width="match_parent"
+       android:layout_height="30dp"
+       android:layout_margin="@dimen/activity__margin_top"
+       android:background="@drawable/edittext_shape"/>
+   <TextView android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:gravity="center"
+       android:text="@string/tishi"
+       android:textSize="@dimen/middle_textsize"/>
+	<Button android:id="@+id/saveButton"
+	    android:layout_width="match_parent"
+	    android:layout_height="40dp"
+	    android:background="@color/top_background"
+	    android:layout_marginLeft="@dimen/activity__margin_top"
+	    android:layout_marginRight="@dimen/activity__margin_top"
+	    android:layout_marginTop="30dp"
+	    android:textColor="@color/white"
+	    android:text="保存"/>
+</LinearLayout>

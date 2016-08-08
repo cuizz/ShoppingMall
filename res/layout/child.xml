@@ -1,0 +1,202 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_White"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <CheckBox
+            android:id="@+id/checkbox_select_child"
+            android:layout_width="22dip"
+            android:layout_height="22dip"
+            android:layout_marginLeft="9dip"
+            android:layout_marginTop="35dp"
+            android:background="@drawable/checkboxselector"
+            android:button="@null" />
+
+        <ImageView
+            android:id="@+id/textview_child_image"
+            android:layout_width="90dip"
+            android:layout_height="90dip"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/liangpin"/>
+
+        <LinearLayout
+            android:id="@+id/layoutVisible"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="8dip"
+            android:orientation="horizontal"
+            android:padding="5dip"
+            android:visibility="gone" >
+		<LinearLayout android:layout_width="match_parent"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    android:orientation="vertical">
+            <TextView
+                android:id="@+id/textview_child_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/textview_child_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:layout_gravity="bottom"
+                android:textSize="13sp" />
+            </LinearLayout>
+            <LinearLayout android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                
+                android:layout_gravity="bottom">
+             <TextView
+                android:id="@+id/textview_child_num"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="bottom"
+                android:textSize="13sp" />
+             </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/linearGone"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:orientation="horizontal" >
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="3" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" >
+
+                    <TextView
+                        android:id="@+id/textview_child_num2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:text="1"
+                        android:textColor="@color/tv_Black"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/cart_reduce"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@id/textview_child_num2"
+                        android:text="－"
+                        android:textColor="@color/tv_Black"
+                        android:textSize="25sp" />
+
+                    <TextView
+                        android:id="@+id/bt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@id/textview_child_num2"
+                        android:text="＋"
+                        android:textColor="@color/tv_Black"
+                        android:textSize="25sp" />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/red" >
+
+                    <Button
+                        android:id="@+id/delete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/shape11"
+                        android:text="删除"
+                        android:textColor="@color/bg_White"
+                        android:textSize="16sp" />
+                </RelativeLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:gravity="center"
+        android:visibility="gone">
+
+        <CheckBox
+            android:id="@+id/quan_cb"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:layout_marginLeft="13dip"
+            android:background="@drawable/checkboxselector"
+            android:button="@null" />
+
+        <TextView
+            android:id="@+id/tv_chakan_one"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:layout_marginLeft="5dp"
+            android:text="10086"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        android:gravity="center"
+        android:visibility="gone">
+
+        
+
+        <TextView
+            android:id="@+id/tv_chakan_two"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:layout_marginLeft="13dp"
+            android:text="查看能使用通用券"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+         android:visibility="gone">
+
+      
+
+        <TextView
+            android:id="@+id/tv_chakan_three"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="2dp"
+            android:text=""
+            android:layout_marginLeft="13dp"
+            android:textSize="10sp" />
+    </LinearLayout>
+
+</LinearLayout>

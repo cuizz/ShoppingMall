@@ -1,0 +1,340 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#f0f0f0"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:background="@color/top_background"
+        android:padding="4dip" >
+
+        <TextView
+            android:id="@+id/changeCity_reback"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="取消"
+            android:textColor="@color/bg_White"
+            android:textSize="@dimen/normal_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="切换城市"
+            android:textColor="@color/bg_White"
+            android:textSize="@dimen/normal_textsize" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <LinearLayout  android:id="@+id/llll"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="#C8C4C4"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:gravity="center_vertical" >
+
+                <EditText
+                    android:id="@+id/search"
+                    android:layout_width="fill_parent"
+                    android:layout_height="30dp"
+                    android:layout_below="@id/title"
+                    android:layout_marginLeft="@dimen/activity__margin_top"
+                    android:layout_marginRight="@dimen/activity__margin_top"
+                    android:background="@drawable/edittext_shape"
+                    android:hint="  请输入城市名"
+                    android:textColor="#515151"
+                    android:textSize="16dp" >
+                </EditText>
+            </LinearLayout>
+			<ListView android:id="@+id/resultlistview"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_below="@id/llll"
+			    android:visibility="gone"></ListView>
+            <ScrollView  android:id="@+id/sc"
+                android:layout_width="wrap_content"
+                android:layout_below="@id/llll"
+                android:layout_height="match_parent" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="#E6E6E6" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="@dimen/activity__margin_top"
+                            android:background="#E6E6E6"
+                            android:gravity="center_vertical"
+                            android:text="定位城市"
+                            android:textSize="@dimen/middles_textsize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_gravity="center_vertical"
+                        android:background="#F4F4F4"
+                        android:gravity="center_vertical" >
+
+                        <TextView
+                            android:id="@+id/dingweicityTV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="@dimen/activity__margin_top"
+                            android:background="@color/white"
+                            android:gravity="center_vertical"
+                            android:text="   定位城市    "
+                            android:textSize="@dimen/middles_textsize" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:background="#E6E6E6" >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="@dimen/activity__margin_top"
+                            android:background="#E6E6E6"
+                            android:gravity="center_vertical"
+                            android:text="热门城市"
+                            android:textSize="@dimen/middles_textsize" />
+                    </LinearLayout>
+
+                    <com.example.shoppingmall.customview.Delateslide
+                        android:id="@+id/hotcityGridView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="#F4F4F4"
+                        android:horizontalSpacing="10dp"
+                        android:numColumns="3"
+                        android:verticalSpacing="5dp" >
+                    </com.example.shoppingmall.customview.Delateslide>
+
+                    <com.example.shoppingmall.customview.MyListView
+                        android:id="@+id/allcityListView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content" >
+                    </com.example.shoppingmall.customview.MyListView>
+                </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="13dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp" />
+
+            <ListView
+                android:id="@+id/slidinglistview"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:visibility="gone" >
+            </ListView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="#"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="B"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="C"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="D"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="E"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="F"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="G"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="K"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="L"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="M"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="N"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="N"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="O"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="P"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Q"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="R"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="S"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="T"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="U"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="V"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="W"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="X"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Y"
+                android:textColor="@color/red" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Z"
+                android:textColor="@color/red" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

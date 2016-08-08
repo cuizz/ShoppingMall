@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+	
+    <include layout="@layout/top_menu" />
+    
+    <ScrollView
+        android:id="@+id/scrollView_02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+            
+            <com.example.shoppingmall.customview.AbSlidingPlayView1
+                android:id="@+id/viewPager_menu2"
+                android:layout_width="match_parent"
+                android:layout_marginTop="-20dp"
+                android:layout_marginBottom="-20dp"
+                android:layout_height="150dp"
+                android:background="#00000000" />
+            
+            <LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+     <LinearLayout
+         android:id="@+id/linearl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_02" />
+
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_01" />
+
+        <ImageView
+            android:id="@+id/iv4"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_06" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="女装" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="男装" />
+
+        <TextView
+            android:id="@+id/tv3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="运动" />
+
+    </LinearLayout>
+     <LinearLayout
+         android:id="@+id/linearl2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv5"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_04" />
+
+        <ImageView
+            android:id="@+id/iv6"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_05" />
+
+        <ImageView
+            android:id="@+id/iv7"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_03" />
+        
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        android:layout_marginBottom="10dp"
+        >
+
+        <TextView
+            android:id="@+id/tv4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="鞋包" />
+
+        <TextView
+            android:id="@+id/tv5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="休闲" />
+
+        <TextView
+            android:id="@+id/tv6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="童装" />
+
+    </LinearLayout>
+
+</LinearLayout>
+			
+             <android.support.v7.widget.RecyclerView
+			    android:id="@+id/home_rv"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content" />
+            
+
+             <!--  
+             <com.example.shoppingmall.customview.MyListView
+            android:id="@+id/listview01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center" 
+            android:divider="@null" 
+            >
+        </com.example.shoppingmall.customview.MyListView>
+        -->
+        
+    
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom"
+    android:background="@color/black"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/orderuseless"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/orderhigh"
+        android:background="@color/bg_White"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <TextView  android:id="@+id/dismiss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:clickable="false"
+            android:text="取消"
+            android:textSize="@dimen/normal_textsize" />
+        <TextView  android:id="@+id/dismiss1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+                        android:layout_weight="1"
+            android:layout_gravity="center"
+            android:layout_marginLeft="5dip"
+            android:clickable="false"
+            android:text="取消"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_textsize" />
+
+        <TextView  android:id="@+id/sure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dip"
+
+            android:clickable="false"
+            android:gravity="right"
+            android:text="确定"
+            android:textSize="@dimen/normal_textsize" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/orderhigh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/view"
+        android:background="@color/my_background_jianxi"
+        android:padding="10dip" >
+
+        <TextView
+            android:id="@+id/gaodi"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:clickable="false"
+            android:gravity="center"
+            android:textColor="#479EFA"
+            android:textSize="@dimen/normal_textsize" />
+         <TextView
+            android:id="@+id/citytextVIew"
+             android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:clickable="false"
+            android:gravity="center"
+            android:textColor="#479EFA"
+            android:textSize="@dimen/normal_textsize" />
+          <TextView
+            android:id="@+id/countrytextview"
+             android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="50dp"
+            android:clickable="false"
+            android:gravity="center"
+            android:textColor="#479EFA"
+            android:textSize="@dimen/normal_textsize" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_above="@id/orderlow"
+        android:background="@color/edittext_hint" />
+
+    <LinearLayout
+        android:id="@+id/orderlow"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="@color/my_background_jianxi"
+        android:orientation="horizontal"
+        android:padding="10dip" >
+
+        <ListView  android:id="@+id/provincelistview"
+            android:layout_width="0dp"
+             android:divider="@null"
+              android:drawSelectorOnTop="false"
+      android:layoutAnimation="@anim/list_anim_layout"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" >
+        </ListView>
+
+        <TextView
+            android:id="@+id/xianshi"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:clickable="false"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/large_textsize" />
+		
+        <ListView  android:id="@+id/citylistview"
+            android:divider="@null"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+             android:drawSelectorOnTop="false"
+      android:layoutAnimation="@anim/list_anim_layout"
+            android:layout_weight="1" >
+        </ListView>
+        <ListView  android:id="@+id/countrylistview"
+            android:divider="@null"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+             android:drawSelectorOnTop="false"
+      android:layoutAnimation="@anim/list_anim_layout"
+            android:layout_weight="1" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

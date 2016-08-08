@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/activity__margin_bottom"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/shopimageview"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_margin="@dimen/activity__margin_bottom"
+            android:src="@drawable/liangpin" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/shopnameTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="店名"
+                android:textSize="@dimen/normal_textsize" />
+
+           <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity__margin_bottom"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:id="@+id/pingjiaTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100人评价"
+                    android:textSize="@dimen/normal_textsize" />
+                <TextView
+                    android:id="@+id/attrnameTV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity__margin_top"
+                    android:text=""
+                    android:textSize="@dimen/normal_textsize" />
+                
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/addressTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity__margin_bottom"
+                android:text="店铺名称"
+                android:textSize="@dimen/normal_textsize" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|bottom"
+            android:layout_weight="1"
+            android:gravity="right|bottom"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/priceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/activity__margin_bottom"
+                android:textColor="@color/top_background"
+                android:text="98"
+                android:textSize="@dimen/latger_textsize" />
+
+            <TextView
+                android:id="@+id/distanceTV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/activity__margin_bottom"
+                android:textColor="@color/bg_Black"
+                android:text="99"
+                android:textSize="@dimen/normal_textsize" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

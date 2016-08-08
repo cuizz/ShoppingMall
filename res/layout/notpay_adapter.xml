@@ -1,0 +1,138 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.shoppingmall.MainActivity" >
+
+    <FrameLayout
+        android:id="@+id/fl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/layout_height"
+        android:background="@color/top_background" >
+
+        <ImageView
+            android:id="@+id/backImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/returnnn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="代付款"
+            android:textColor="@color/white"
+            android:textSize="@dimen/large_textsize" />
+    </FrameLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity__margin_top"
+            android:text="海澜之家"
+            android:textSize="@dimen/normal_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="@dimen/activity__margin_top"
+            android:text="代付款"
+            android:textColor="@color/top_background"
+            android:textSize="@dimen/normal_textsize" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/activity__margin_top"
+        android:background="@color/my_background_jianxi" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity__margin_top"
+            android:src="@drawable/liangpin" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+            <TextView 
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity__margin_bottom"
+                android:textSize="@dimen/normal_textsize"
+                android:text="商品名称"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity__margin_bottom"
+                android:textSize="@dimen/middle_textsize"
+                android:textColor="@color/edittext_hint"
+                android:text="商品简介"/>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_marginTop="@dimen/activity__margin_bottom"
+                android:textSize="@dimen/normal_textsize"
+                android:textColor="@color/top_background"
+                android:text="100"/>
+        </LinearLayout>
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="right|bottom"
+            android:layout_margin="@dimen/activity__margin_top"
+            android:text="x1"/>
+    </LinearLayout>
+ <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/activity__margin_top"
+        android:background="@color/my_background_jianxi" />
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp" 
+        android:layout_marginTop="@dimen/activity__margin_top"
+        android:layout_marginBottom="@dimen/activity__margin_top"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="合计：168"
+            android:gravity="center"
+            android:textSize="@dimen/normal_textsize" />
+         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="qiwinfassds"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/normal_textsize" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_weight="1"
+            android:background="@drawable/textview_shape"
+            android:layout_marginRight="@dimen/activity__margin_top"
+            android:text="去付款 "
+            android:gravity="center"
+            android:textColor="@color/top_background"
+            android:textSize="@dimen/normal_textsize" />
+    </LinearLayout>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.shoppingmall.MainActivity" >
+
+    <TextView  android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/normal_textsize"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="@dimen/activity__margin_top"
+        android:layout_marginBottom="@dimen/activity__margin_top"      
+        android:text="海蓝支架" />
+    <TextView  android:id="@+id/ordertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/normal_textsize"
+        android:layout_marginLeft="30dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="@dimen/activity__margin_top"
+        android:layout_marginBottom="@dimen/activity__margin_top"     
+        android:layout_marginRight="@dimen/activity__margin_top" 
+        android:textColor="@color/orders"
+        android:text="已发货" />
+
+</RelativeLayout>

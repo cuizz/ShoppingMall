@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_White"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/top_background"
+        android:padding="4dip" >
+
+        <ImageView
+            android:id="@+id/forreturned"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/returnnn" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/querendingdan"
+            android:textColor="@color/bg_White"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dip"
+        android:text="@string/chooseStyle"
+        android:textColor="@color/bg_Gray" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="90dip"
+        android:orientation="vertical"
+        android:padding="5dip" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1"
+            android:background="@drawable/shape1"
+            android:orientation="horizontal" >
+
+            <CheckBox
+                android:id="@+id/lineon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/checkboxselector"
+                android:button="@null" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dip"
+                android:src="@drawable/lineon" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_marginTop="5dip"
+            android:layout_weight="1"
+            android:background="@drawable/shape1" >
+
+            <CheckBox
+                android:id="@+id/lineoff"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/checkboxselector"
+                android:button="@null" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dip"
+                android:src="@drawable/wf" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <ListView
+        android:id="@+id/checked_products"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:id="@+id/checked_relative"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#323232"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/total_price"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="123"
+            android:textSize="@dimen/normal_textsize"
+            android:textColor="@color/white"
+            android:layout_marginLeft="20dp" />
+
+        <TextView
+            android:id="@+id/pay"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:padding="7dip"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="7dip"
+            android:background="@color/top_background"
+            android:clickable="true"
+            android:gravity="center"
+             android:textSize="@dimen/normal_textsize"
+            android:text="付款"
+            android:textColor="@color/bg_White" />
+    </RelativeLayout>
+
+</LinearLayout>

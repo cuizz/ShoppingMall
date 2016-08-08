@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">ShoppingMall</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="daifukuai">代付款</string>
+    <string name="shiyong">待使用</string>
+    <string name="pingjia">待评价</string>
+    <string name="shouhuo">售后服务</string>
+    <string name="more">更多</string>
+    <string name="scan_text">将二维码放进框内扫描</string>
+    <string name="disanfang">————  其他方式登录  ————</string>
+    <string name="pay_result_callback_msg" formatted="false">微信支付结果：%s</string>
+    <string name="app_tip">提示</string>
+    <string name="shop_cart">购物车</string>
+    <string name="title_activity_news_shop">NewsShop</string>
+    <string name="searchview_text">请输入商家、品类、商圈</string>
+	<string name="querendingdan">确认订单</string>
+	<string name="chooseStyle">请选择支付方式</string>
+	<string name="share">分享</string>
+	<string name="phone">电话咨询</string>
+	<string name="women">女装</string>
+	<string name="tishi">以英语字母或汉字开头，限4-16字符，一个汉字两个字符</string>
+</resources>

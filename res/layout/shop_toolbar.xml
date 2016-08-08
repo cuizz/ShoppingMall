@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+     <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:background="#C2C2C2"
+        >
+ 
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/collapse_toolbar1"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:fitsSystemWindows="true"
+            app:contentScrim="?attr/colorPrimary"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+ 			
+            <LinearLayout 
+			    android:layout_width="match_parent"
+			    android:layout_height="230dp"
+			    android:orientation="vertical" >
+			    
+			    <RelativeLayout
+			        android:background="#C2C2C2"
+			        android:layout_width="fill_parent"
+			        android:layout_height="180dp" >
+			
+			        <ImageView
+			            android:id="@+id/iv8"
+			            android:layout_width="60dp"
+			            android:layout_height="60dp"
+			            android:layout_alignParentBottom="true"
+			            android:layout_alignParentLeft="true"
+			            android:src="@drawable/ic_launcher" />
+			
+			        <ImageView
+			            android:id="@+id/iv9"
+			            android:layout_width="40dp"
+			            android:layout_height="40dp"
+			            android:layout_alignLeft="@+id/textView1"
+			            android:layout_alignTop="@+id/iv8"
+			            android:src="@drawable/ic_phone" />
+			
+			        <TextView
+			            android:id="@+id/textView1"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_alignParentBottom="true"
+			            android:layout_alignParentRight="true"
+			            android:text="电话咨询" />
+			
+			        <TextView
+			            android:id="@+id/shopname"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_alignTop="@+id/iv8"
+			            android:layout_toRightOf="@+id/iv8"
+			            android:gravity="center"
+			            android:text="店名"
+			            android:textSize="18sp" />
+			
+			        <ImageView
+			            android:id="@+id/imageView1"
+			            android:layout_width="30dp"
+			            android:layout_height="30dp"
+			            android:layout_alignLeft="@+id/tv7"
+			            android:layout_alignParentBottom="true"
+			            android:src="@drawable/time" />
+			
+			        <TextView
+			            android:id="@+id/tv8"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_alignParentBottom="true"
+			            android:layout_toRightOf="@+id/tv7"
+			            android:gravity="center"
+			            android:text="9:00-21:00" />
+			
+			    </RelativeLayout>
+			    <RelativeLayout
+			        android:layout_width="fill_parent"
+			        android:layout_height="30dp" >
+			
+			        <TextView
+			            android:id="@+id/textView8"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_alignBaseline="@+id/textView7"
+			            android:layout_alignBottom="@+id/textView7"
+			            android:layout_marginLeft="44dp"
+			            android:layout_toRightOf="@+id/textView7"
+			            android:text="41.6km" />
+			
+			        <TextView
+			            android:id="@+id/textView7"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_alignParentBottom="true"
+			            android:layout_toRightOf="@+id/imageView4"
+			            android:text="和谐广场对面" />
+			
+			        <TextView
+			            android:id="@+id/textView9"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+			            android:layout_alignParentBottom="true"
+			            android:layout_alignParentRight="true"
+			            android:layout_marginRight="25dp"
+			            android:text="去这里  >" />
+			
+			        <ImageView
+			            android:id="@+id/imageView4"
+			            android:layout_width="30dp"
+			            android:layout_height="30dp"
+			            android:layout_marginTop="10dp"
+			            android:layout_alignParentLeft="true"
+			            android:layout_alignParentTop="true"
+			            android:src="@drawable/ic_location" />
+			
+			    </RelativeLayout>
+			    
+			    <LinearLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="20dp"
+			         >
+			
+			        <TextView
+			            android:id="@+id/textView2"
+			            android:layout_marginTop="10dp"
+			            android:layout_width="fill_parent"
+			            android:layout_height="1dp"
+			            android:background="#5B5B5B"
+			            />
+			        
+			    </LinearLayout>
+   			</LinearLayout>
+ 
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar1"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:gravity="top"
+                android:minHeight="?attr/actionBarSize"
+                 android:background="?attr/colorPrimary"
+                app:layout_collapseMode="pin"
+                android:fitsSystemWindows="true"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:titleMarginTop="20dp" />
+ 
+ 
+        </android.support.design.widget.CollapsingToolbarLayout>
+        <android.support.design.widget.TabLayout
+                android:id="@+id/tabLayout_01"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                 />
+ 		
+    </android.support.design.widget.AppBarLayout>
+    
+     
+	<LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:orientation="vertical"
+	        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        
+	    
+	         <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager_01"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+	    </LinearLayout>
+	    <!-- 
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nestedScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        
+        
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewPager_01"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+    </android.support.v4.widget.NestedScrollView>
+ -->
+    
+    
+</android.support.design.widget.CoordinatorLayout>
