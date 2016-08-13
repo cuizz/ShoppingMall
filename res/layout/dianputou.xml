@@ -53,7 +53,7 @@
             android:text="3.8km" />
 
         <TextView
-            android:id="@+id/tv8"
+            android:id="@+id/address"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

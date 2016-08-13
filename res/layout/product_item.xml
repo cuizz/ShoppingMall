@@ -3,14 +3,14 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:orientation="vertical" >
-    
 
     <ImageView
-            android:id="@+id/productimage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:scaleType="centerCrop"
-             />
+        android:id="@+id/imageView1"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginLeft="20dp"
+        android:src="@drawable/ic_shoe" />
+
     <RelativeLayout
             android:id="@+id/rel01"
             android:layout_width="wrap_content"
@@ -22,15 +22,15 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:layout_alignParentTop="true"
-                android:text="商品名称" />
+                android:text="" />
 
             <TextView
-                android:id="@+id/tv12"
+                android:id="@+id/prices"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_alignParentLeft="true"
-                android:text="99" />
+                android:text="" />
 
             <TextView
                 android:id="@+id/tv14"
@@ -38,7 +38,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_marginLeft="15dp"
-                android:layout_toRightOf="@+id/tv11"
+                android:layout_toRightOf="@+id/prices"
                 android:text="133人付款" />
 
         </RelativeLayout>

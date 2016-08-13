@@ -36,9 +36,9 @@ public class Main_Tao extends Activity implements OnClickListener, IBtnCallListe
 	private TextView mainTextView,shopTextView,cartTextView,mineTextView,moreTextView;
 	private List<TextView>list=new ArrayList<TextView>();
 	/** 主界面 */
-	private MainFragment mainActivity;
+	private ShopFragment mainActivity;
 	/** 商家界面 */
-	private ShopFragment shop;
+	private MainFragment shop;
 	//我的
 	private MineFagment mine;
 	//更多
@@ -84,9 +84,9 @@ public class Main_Tao extends Activity implements OnClickListener, IBtnCallListe
 		// 设置默认首页为点击时的图片
 		bt_menu[0].setImageResource(select_on[0]);*/
 		FragmentTransaction ft = this.getFragmentManager().beginTransaction();
-		if(mainActivity==null){
-			mainActivity=new MainFragment();
-		}
+		//if(mainActivity==null){
+			mainActivity=new ShopFragment();
+		//}
 		ft.replace(R.id.show_layout, mainActivity);
 		ft.commit();
 		textColor(0);
@@ -110,7 +110,7 @@ public class Main_Tao extends Activity implements OnClickListener, IBtnCallListe
 			}*/
 			FragmentTransaction ft = this.getFragmentManager().beginTransaction();
 			if(mainActivity==null){
-				mainActivity=new MainFragment();
+				mainActivity=new ShopFragment();
 			}
 			ft.replace(R.id.show_layout, mainActivity);
 			ft.commit();
@@ -132,7 +132,7 @@ public class Main_Tao extends Activity implements OnClickListener, IBtnCallListe
 			}*/
 			FragmentTransaction ft1 = this.getFragmentManager().beginTransaction();
 			//if(shop==null){
-				shop=new ShopFragment();
+				shop=new MainFragment();
 			//}
 			ft1.replace(R.id.show_layout, shop);
 			ft1.commit();
@@ -282,7 +282,7 @@ public class Main_Tao extends Activity implements OnClickListener, IBtnCallListe
 	@Override
 	public void transferMsg() {
 		if (mainActivity == null) {
-			mainActivity = new MainFragment();
+			mainActivity = new ShopFragment();
 			//addFragment(mainActivity);
 			//showFragment(mainActivity);
 		} else {

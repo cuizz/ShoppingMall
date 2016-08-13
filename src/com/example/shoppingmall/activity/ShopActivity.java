@@ -54,6 +54,7 @@ public class ShopActivity extends Activity{
 		listview.setAdapter(adapter);
 	}
 
+	@SuppressLint("WrongViewCast")
 	private void initviews() {
 		// TODO Auto-generated method stub
 		scollview=(PullToRefreshScrollView) findViewById(R.id.scrollView1);

@@ -13,6 +13,7 @@ import org.json.JSONObject;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Handler;
+import android.support.v7.widget.RecyclerView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -28,7 +29,8 @@ import com.handmark.pulltorefresh.library.PullToRefreshListView;
 
 public class PostToProductList {
 	private String num, order;
-	private ListView listview;
+	
+	private RecyclerView recyclerView;
 	private Context context;
 	private Handler mhandler;
 	protected String cartTime;
@@ -36,11 +38,13 @@ public class PostToProductList {
 	private String cartOrder;
 	private String shop_id;
 	private int page=1;
-	public PostToProductList(Context context,  String num,Handler mhandler,ListView listview,String shop_id) {
+	private String city_id = "370100";
+	public PostToProductList(Context context,  String num,
+			Handler mhandler,RecyclerView recyclerView,String shop_id) {
 		super();
 		this.num = num;
 		this.context = context;
-		this.listview=listview;
+		this.recyclerView=recyclerView;
 		this.mhandler = mhandler;
 		this.shop_id=shop_id;
 	}
@@ -52,15 +56,16 @@ public class PostToProductList {
 		page=1;
 	}
 	public void addListData(){
-		requestData("getProductList", "product", num, page+"",order,shop_id);
+		requestData("getProductList", "product", num, page+"",order,shop_id,city_id);
 		page++;
 	}
 	
-	private void goodsInfo(String str, String strr,String order,String shop_id ) {
+	private void goodsInfo(String str, String strr,String order,String shop_id ,String city_id) {
 
 		jsGoodsInfo = new JSONObject();
 		try {
 			jsGoodsInfo.put("shop_id", shop_id) ;
+			jsGoodsInfo.put("city_id", city_id);
 			jsGoodsInfo.put("order", order) ;
 			jsGoodsInfo.put("num", str);
 			jsGoodsInfo.put("page", strr);	
@@ -68,8 +73,8 @@ public class PostToProductList {
 			e.printStackTrace();
 		}
 	}
-	public void requestData(final String a,final String c,final String num,final String page,final String order,String shop_id){
-		goodsInfo(num, page,order,shop_id );
+	public void requestData(final String a,final String c,final String num,final String page,final String order,String shop_id,String city_id){
+		goodsInfo(num, page,order,shop_id,city_id );
 
 		RequestQueue mQueue = Volley.newRequestQueue(context);
 		StringRequest stringRequest = new StringRequest(Method.POST,
