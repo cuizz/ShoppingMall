@@ -40,13 +40,14 @@ public class PostToProductList {
 	private int page=1;
 	private String city_id = "370100";
 	public PostToProductList(Context context,  String num,
-			Handler mhandler,RecyclerView recyclerView,String shop_id) {
+			Handler mhandler,RecyclerView recyclerView,String shop_id,String order) {
 		super();
 		this.num = num;
 		this.context = context;
 		this.recyclerView=recyclerView;
 		this.mhandler = mhandler;
 		this.shop_id=shop_id;
+		this.order = order;
 	}
 	public void setAttrs(String order){
 		this.order=order;
@@ -65,7 +66,7 @@ public class PostToProductList {
 		jsGoodsInfo = new JSONObject();
 		try {
 			jsGoodsInfo.put("shop_id", shop_id) ;
-			jsGoodsInfo.put("city_id", city_id);
+			jsGoodsInfo.put("city_id", city_id) ;
 			jsGoodsInfo.put("order", order) ;
 			jsGoodsInfo.put("num", str);
 			jsGoodsInfo.put("page", strr);	

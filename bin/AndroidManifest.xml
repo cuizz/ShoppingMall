@@ -48,9 +48,12 @@
             android:value="7BffIdoZxAMpDuY6VjNtEVKcgzMQNvX5" />
         
        <!-- android:name="com.example.shop.MainActivity5"
+       android:name="com.example.shoppingmall.activity.Main_Tao"
+       android:name="com.example.imgod.testtabicontext.activitys.IconTextTabsActivity"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar" --> 
         
         <activity
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar"
             android:name="com.example.shoppingmall.activity.Main_Tao"
             android:label="@string/app_name" >
             <intent-filter>
@@ -158,12 +161,12 @@
     android:theme="@android:style/Theme.Translucent" >
             </activity>
             
-        <!-- 店铺详情 -->
+        <!-- 店铺详情-->
             <activity 
             android:theme="@style/Theme.AppCompat.Light.NoActionBar"
-			android:name="com.example.shop.MainActivity5"
+			android:name="com.example.imgod.testtabicontext.activitys.IconTextTabsActivity"
             ></activity>
-
+		 
     </application>
 
 </manifest>

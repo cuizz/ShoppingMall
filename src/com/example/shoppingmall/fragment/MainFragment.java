@@ -38,6 +38,7 @@ import com.baidu.location.BDLocationListener;
 import com.baidu.location.LocationClient;
 import com.baidu.location.LocationClientOption;
 import com.baidu.location.LocationClientOption.LocationMode;
+import com.example.imgod.testtabicontext.activitys.IconTextTabsActivity;
 import com.example.shop.MainActivity5;
 import com.example.shoppingmall.R;
 import com.example.shoppingmall.activity.ChangeCityActivity;
@@ -455,7 +456,7 @@ public class MainFragment extends Fragment{
 							public void onClick(View v) {
 								// TODO Auto-generated method stub
 								//Intent intent1 = new Intent("MY_NEW_LIFEFORM");
-								Intent intent2 = new Intent(getActivity(),MainActivity5.class);
+								Intent intent2 = new Intent(getActivity(),IconTextTabsActivity.class);
 								//intent1.putExtra("shopName", list.get(position /5).getName());
 								//intent1.putExtra("shop_id", list.get(position /5).getId());
 								intent2.putExtra("shopName", list.get(position /5).getName());

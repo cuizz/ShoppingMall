@@ -57,20 +57,12 @@ public class LittleShopFragment extends Fragment{
 	
 	List<View> views=new ArrayList<>();
 	
-	
-	public static String productName[]=new String[]{"商品名称1","商品名称2","商品名称3","商品名称4","商品名称5","商品名称1","商品名称2","商品名称3","商品名称4","商品名称5","商品名称1","商品名称2","商品名称3","商品名称4","商品名称5","商品名称1","商品名称2","商品名称3","商品名称4","商品名称5","商品名称1","商品名称2","商品名称3","商品名称4","商品名称5",
-		"商品名称1","商品名称2","商品名称3","商品名称4","商品名称5","商品名称1","商品名称2","商品名称3","商品名称4","商品名称5","商品名称1","商品名称2","商品名称3","商品名称4","商品名称5","商品名称1","商品名称2","商品名称3","商品名称4","商品名称5","商品名称1","商品名称2","商品名称3","商品名称4","商品名称5"};
-	
 	private String mshop_id;
 	private Context mContext;
 	private RecyclerView recyclerView;
 	private RecyclerViewAdapter recyclerViewAdapter;
 	
-	private String strResult = null;
-	private String result;
-	private List<NameValuePair> params;
 	private String myurl = "http://192.168.1.115/liangpin/index.php";
-	protected String s;
 	
 	private PostToProductList productList;
 	private List<ProductBean> productBean = new ArrayList<>();
@@ -89,40 +81,6 @@ public class LittleShopFragment extends Fragment{
 				.inflate(R.layout.product_recycle, container, false);
 		
 		
-//		recyclerView= (RecyclerView) view.findViewById(R.id.id_rv);
-		
-		
-//		productList = new PostToProductList(getActivity(), "10", mhandler, recyclerView, mshop_id);
-		
-//		s = new Date().getTime() + "";
-//  		String time = s.substring(0,10);
-//  		String password = "getProductListproduct";
-//  		String token = "liangpin";
-//  		String Md5Password = Md5.getMD5Str(password + time + token);
-//  		
-//  		String sign = Md5.getMD5Str(Md5Password);
-//        String openid = "1";
-//        String a = "getProductList";
-//        String c = "product";
-//
-//        params=new ArrayList<NameValuePair>();
-//  		params.add(new BasicNameValuePair("a", a));
-//  		params.add(new BasicNameValuePair("c", c));
-//  		try{
-//  			JSONObject json = new JSONObject();
-//  			json.put("shop_id", "1");
-//  	  		json.put("city_id", "370100");
-//  	  		json.put("order", "1");
-//  	  		json.put("num", "5");
-//  	  		json.put("shop_page", "1");
-//  	  		
-//  	  	params.add(new BasicNameValuePair("param",json.toString() ));
-//  		}catch(Exception e){
-//  			
-//  		}
-//  		params.add(new BasicNameValuePair("timesnamp", time));
-//  		params.add(new BasicNameValuePair("openid", openid));
-//  		params.add(new BasicNameValuePair("sign", sign));
   		
 		
 		
@@ -131,7 +89,7 @@ public class LittleShopFragment extends Fragment{
   		recyclerView= (RecyclerView) view.findViewById(R.id.id_rv);
   		
   		
-  		productList=new PostToProductList(getActivity(), "10", mhandler, recyclerView,"1");
+  		productList=new PostToProductList(getActivity(), "10", mhandler, recyclerView,"1","1");
   		productList.addListData();
   		
 		final GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
@@ -143,8 +101,6 @@ public class LittleShopFragment extends Fragment{
             //view.setTag(recyclerView);
              //views.add(view);
              
-//             new Thread(getJson).start();
-//             Log.d("wwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww", "执行了线程");
 		return view;
 	}
 	
@@ -171,11 +127,11 @@ public class LittleShopFragment extends Fragment{
 						recyclerViewAdapter=new RecyclerViewAdapter(getActivity(), productBean);
 						recyclerView.setAdapter(recyclerViewAdapter);
 					}else{
-						recyclerViewAdapter.notifyDataSetChanged();
+						//recyclerViewAdapter.notifyDataSetChanged();
+						recyclerViewAdapter=new RecyclerViewAdapter(getActivity(), productBean);
+						recyclerView.setAdapter(recyclerViewAdapter);
 					}
-					//listview.onRefreshComplete();
 				} catch (Exception e) {
-					// TODO Auto-generated catch block   14696862124973.jpg
 					e.printStackTrace();
 				}
 
@@ -183,113 +139,5 @@ public class LittleShopFragment extends Fragment{
 			}
 		};
 	};
-	
-	
-	
-	
-	
-	
-	
-	
-//	private Runnable getJson=new Runnable(){
-//
-//		@Override
-//		public void run() {
-//			// TODO Auto-generated method stub
-//			try
-//			{
-//				result=GetJson(myurl, params);
-//				//handler.sendEmptyMessage(0x00);
-//			}
-//			catch(Exception e)
-//			{
-//				//handler.sendEmptyMessage(0x01);
-//			}
-//		}
-//	};
-//	
-////	Handler handler=new Handler(){
-////		@Override
-////		public void handleMessage(android.os.Message msg){
-////			if(msg.what==0x00)
-////			{
-////				//textview.setText(result);
-////				Log.v("PostGetJson",""+result);
-////			}
-////			else if(msg.what==0x01)
-////			{
-////			}
-////		}
-////	};
-//	
-//	/**
-//	 * ����post�����ȡjson�ַ�
-//	 * @param url ��վ
-//	 * @param params ����List
-//	 * @return json�ַ�
-//	 */
-//	private String GetJson(String url, List<NameValuePair> params) {
-//		HttpPost httpRequest = new HttpPost(url);
-//		
-//		HttpParams httpParameters1 = new BasicHttpParams();
-//		HttpConnectionParams
-//		.setConnectionTimeout(httpParameters1, 10 * 1000);
-//		HttpConnectionParams.setSoTimeout(httpParameters1, 10 * 1000);
-//
-//		try {
-//			httpRequest.setParams(httpParameters1);
-//			httpRequest.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
-//
-//			HttpResponse httpResponse = new DefaultHttpClient()
-//					.execute(httpRequest);
-//
-//			if (httpResponse.getStatusLine().getStatusCode() == 200) 
-//			{
-//
-//				strResult = EntityUtils.toString(httpResponse.getEntity());
-//				Log.d("datatatas", strResult);
-//				parseJson(strResult);
-//			} 
-//			else 
-//			{
-//
-//			}
-//		} catch (UnsupportedEncodingException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (ClientProtocolException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		} catch (IOException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		return strResult;
-//	}
-//	
-//	 private void parseJson(String strResult) {   
-//		 
-//	        try {   
-//	        	
-//	        	JSONObject jsonObject=new JSONObject(strResult);
-//	        	JSONArray jsonArray = jsonObject.optJSONArray("result");
-//	        	for(int i = 0;i < jsonArray.length(); i++){
-//	        		ProductBean product = new ProductBean();
-//	        		JSONObject json = jsonArray.optJSONObject(i);
-//	        		product.setGoodsName(json.getString("title"));
-//	        		productBean.add(product);
-//	        	}
-//	        	if(recyclerViewAdapter==null){
-//	        		recyclerViewAdapter = new RecyclerViewAdapter(getActivity(),productBean);
-//					recyclerView.setAdapter(recyclerViewAdapter);
-//					Log.d("aaaaaaaaaaaaaaa", productBean.size()+"");
-//	        	}else{
-//	        		recyclerViewAdapter.notifyDataSetChanged();
-//	        	}
-//	        } catch (JSONException e) {   
-//	            e.printStackTrace();   
-//	        }  
-//	        
-//	    }   
 	 
 }

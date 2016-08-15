@@ -35,6 +35,8 @@ public class MainActivity5 extends AppCompatActivity {
 //	private RecyclerView recyclerView;
 //	private List<ProductBean> productBean = new ArrayList<>();
 	
+	
+	
 	private String shop_id;
 	private LittleShopFragment fragment;
 	
@@ -58,7 +60,7 @@ public class MainActivity5 extends AppCompatActivity {
         
         fragment = new LittleShopFragment();
         
-        
+        //加载toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar1);
         setSupportActionBar(toolbar);
         //显示返回按钮图标
@@ -93,6 +95,7 @@ public class MainActivity5 extends AppCompatActivity {
 
     private void initData() {
         tabs = new ArrayList<>();
+        
         tabs.add("店铺首页");
         tabs.add("全部宝贝");
         tabs.add("新品上架");
@@ -108,6 +111,7 @@ public class MainActivity5 extends AppCompatActivity {
         tabLayout.addTab(tabLayout.newTab().setText(tabs.get(0)));/**注意创建TAB对象：tabLayout.newTab()*/
         tabLayout.addTab(tabLayout.newTab().setText(tabs.get(1)));
         tabLayout.addTab(tabLayout.newTab().setText(tabs.get(2)));
+        tabLayout.getTabAt(0).setIcon(R.drawable.ic_01);
     }
 
     private void initAdapter() {

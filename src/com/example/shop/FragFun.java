@@ -52,12 +52,14 @@ private void initViewPager() {
 
     private void initData() {
         tabs = new ArrayList<>();
-        tabs.add("店铺首页");
-        tabs.add("全部宝贝");
-        //tabs.add("新品上架");
-
+        tabs.add("综合");
+        tabs.add("销量");
+        tabs.add("新品");
+        tabs.add("价格");
+        
         fragments = new ArrayList<>();
-        //fragments.add(new LittleShopFragment());
+        fragments.add(new LittleShopFragment());
+        fragments.add(new FragSport());
         fragments.add(new FragSport());
         fragments.add(new FragSport());
     }
@@ -66,7 +68,8 @@ private void initViewPager() {
         tabLayout.setTabMode(TabLayout.MODE_FIXED);
         tabLayout.addTab(tabLayout.newTab().setText(tabs.get(0)));/**注意创建TAB对象：tabLayout.newTab()*/
         tabLayout.addTab(tabLayout.newTab().setText(tabs.get(1)));
-        //tabLayout.addTab(tabLayout.newTab().setText(tabs.get(2)));
+        tabLayout.addTab(tabLayout.newTab().setText(tabs.get(2)));
+        tabLayout.addTab(tabLayout.newTab().setText(tabs.get(2)));
     }
 
     private void initAdapter() {

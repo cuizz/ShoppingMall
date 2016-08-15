@@ -22,4 +22,7 @@
 	<string name="phone">电话咨询</string>
 	<string name="women">女装</string>
 	<string name="tishi">以英语字母或汉字开头，限4-16字符，一个汉字两个字符</string>
+	<string name="string_find">发现</string>
+    <string name="string_ticket">购票</string>
+    <string name="string_activity">活动</string>
 </resources>

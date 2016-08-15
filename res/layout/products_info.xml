@@ -270,7 +270,7 @@
             android:layout_height="30dp"
             android:layout_gravity="center"
             android:layout_weight="1"
-            android:src="@drawable/shoper" />
+            android:src="@drawable/ic_shoe" />
 	<View android:layout_height="match_parent"
 	    android:layout_width="1dp"
 	    android:background="#AAAAAA"/>
